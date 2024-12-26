@@ -2,8 +2,18 @@
     "version": 2,
     "builds": [
         {
-            "src": "*.py",
-            "use": "@vercel/python"
+            "src": "server.js",
+            "use": "@vercel/node"
         }
-    ]
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "index.js"
+        }
+    ],
+    "env": {
+        "NODE_ENV": "production",
+        "MONGO_URI": "mongodb+srv://shivankar:shivank04@cluster0.ise9b.mongodb.net/content-gini?retryWrites=true&w=majority&appName=Cluster0"
+    }
 }
