@@ -13,7 +13,6 @@
         }
     ],
     "env": {
-        "NODE_ENV": "production",
-        "MONGO_URI": "mongodb+srv://shivankar:shivank04@cluster0.ise9b.mongodb.net/portfolio-website?retryWrites=true&w=majority&appName=Cluster0"
+        "NODE_ENV": "production"
     }
 }
