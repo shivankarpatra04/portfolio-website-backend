@@ -33,7 +33,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cors({
     origin: process.env.NODE_ENV === 'production'
         ? process.env.FRONTEND_URL
-        : ['https://portfolio-website-frontend-gray.vercel.app/'], // Replace with your frontend URL during development
+        : ['https://portfolio-website-frontend-gilt.vercel.app/'], // Replace with your frontend URL during development
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
