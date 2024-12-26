@@ -29,12 +29,13 @@ initializeDB();
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
+// Configure CORS
 app.use(cors({
     origin: process.env.NODE_ENV === 'production'
-        ? 'https://portfolio-website-frontend-gilt.vercel.app' // Frontend URL
-        : 'http://localhost:3000', // Local development
-    credentials: true, // Allow cookies and headers
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed methods
+        ? 'https://portfolio-website-frontend-gilt.vercel.app' // Frontend URL in production
+        : 'http://localhost:3000', // Local development URL
+    credentials: true, // Allow cookies and credentials
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
 }));
 
